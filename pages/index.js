@@ -1,5 +1,7 @@
 import Head from 'next/head'
 
+import Card from '../components/card'
+
 
 import Layout from '../components/layout'
 import { getLatestItems } from '../services/ItemService'
@@ -7,13 +9,13 @@ import { getLatestItems } from '../services/ItemService'
 
 export default function Home({data}) {
   return (
-    <Layout>
-       <p>Home</p>
+    <Layout><h2 className='text-2xl font-bold text-center m-6'>The most recent products</h2> 
+       <section className='flex flex-col md:flex-row justify-between items-center  p-6 max-w-6xl m-auto gap-4'>
+        
        { data && data.map((item) => (
-         <div key={item.id}>
-            <h2>{item.name}</h2>
-          </div>
+          <Card key={item.id} data={item} showAs={'home'} />
         ))}
+        </section>
      </Layout> 
   )
 }
