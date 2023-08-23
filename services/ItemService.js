@@ -9,7 +9,7 @@ export async function getItems() {
 //getting latest items
 export async function getLatestItems() {
     const request = await getItems()
-    const data = request.slice(0, 4)
+    const data = request.slice(0, 3)
     return data
 }
 
