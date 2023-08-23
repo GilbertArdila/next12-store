@@ -7,6 +7,8 @@ export const CartProvider = ({children}) => {
     const [count, setCount] = useState(0);
     //cart state
     const [cart, setCart] = useState([]);
+    // open-close checkout
+    const [openCheckout, setOpenCheckout] = useState(false);
 
     return (
         <cartContext.Provider value={
@@ -14,7 +16,9 @@ export const CartProvider = ({children}) => {
                 count,
                 setCount,
                 cart,
-                setCart
+                setCart,
+                openCheckout,
+                setOpenCheckout
             }
         }>
             {children}
