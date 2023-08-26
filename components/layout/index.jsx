@@ -23,9 +23,9 @@ const Layout = ({ children, title }) => {
             {context.openCheckout && <Checkout/>}
             
 
-            <footer className='w-full h-16 bg-slate-400 flex flex-col justify-center items-center'>
-                <p className='text-white text-2xl font-bold'>This is an app made with Next.js and Tailwindcss</p>
-                <p className='text-white text-2xl font-bold'>made with 💚 by Gilbert Ardila </p>
+            <footer className='w-full h-auto md:h-16 bg-teal-500 flex flex-col justify-center items-center p-4'>
+                <p className='text-white text:xl md:text-2xl font-bold'>This is an app made with Next.js and Tailwindcss</p>
+                <p className='text-white text:xl md:text-2xl font-bold'>made with 💙 by Gilbert Ardila </p>
             </footer>
 
         </div>
