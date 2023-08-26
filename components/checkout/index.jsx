@@ -41,6 +41,7 @@ const Checkout = () => {
       <span className='absolute  right-2  cursor-pointer'
         onClick={handleOnClick}
       ><XCircleIcon className="h-6 w-6 text-black  " /></span>
+      <h3 className='text-2xl font-mono text-center mt-6'>Your order</h3>
       {context.cart.map((item) => (
         <div className='flex flex-col justify-between items-center w-full h-auto mt-7 border-2 border-blue-500 shadow-lg rounded-md  '>
           <Image src={item.url} width={50} height={50} alt={item.name} className="rounded-lg m-4 w-20 h-20" />
@@ -68,8 +69,8 @@ const Checkout = () => {
           <p className='text-md font-bold'>Sub-total: ${item.price * item.quantity}</p>
         </div>
       ))}
-      {total > 0 ? <span className='text-xl font-bold mt-4 '>Total: ${total}</span>:
-      <span className='text-xl font-bold m-auto '>Your cart is empty</span>}
+      {total > 0 ? <span className='text-xl font-bold mt-4 '>Total: ${parseFloat(total).toFixed(2)}</span>:
+      <span className='text-xl font-mono m-auto text-center '>Your cart is empty</span>}
 
 
     </section>
