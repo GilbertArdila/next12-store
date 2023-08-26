@@ -24,7 +24,12 @@ const Card = ({ data, showAs }) => {
       context.setCart([...context.cart, { id: data.id, name: data.name, url: data.url, price: data.price, quantity: 1 }])
       
     }
+    // open checkout
+    context.setOpenCheckout(true)
   }
+
+  
+
 
   if (showAs === 'store') {
     return (

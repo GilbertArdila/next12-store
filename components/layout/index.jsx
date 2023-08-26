@@ -20,7 +20,7 @@ const Layout = ({ children, title }) => {
             <main className='w-full min-w-[100vw] h-full min-h-[calc(100vh-112px)]'>
                 {children}
             </main>
-            {!context.openCheckout && <Checkout/>}
+            {context.openCheckout && <Checkout/>}
             
 
             <footer className='w-full h-16 bg-slate-400 flex flex-col justify-center items-center'>
